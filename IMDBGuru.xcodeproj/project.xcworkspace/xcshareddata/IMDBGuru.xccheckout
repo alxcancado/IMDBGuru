@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B95469A0-AECC-4824-8008-8FECEC8829D3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>IMDBGuru</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A6E272E6CA6C18A33407FC6F5605BE225F5C2E24</key>
+		<string>https://github.com/alxcancado/IMDBGuru.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>IMDBGuru.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A6E272E6CA6C18A33407FC6F5605BE225F5C2E24</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/alxcancado/IMDBGuru.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A6E272E6CA6C18A33407FC6F5605BE225F5C2E24</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A6E272E6CA6C18A33407FC6F5605BE225F5C2E24</string>
+			<key>IDESourceControlWCCName</key>
+			<string>IMDBGuru</string>
+		</dict>
+	</array>
+</dict>
+</plist>

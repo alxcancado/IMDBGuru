@@ -13,6 +13,7 @@
 		640CA3FB1A99CE8F005209CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 640CA3FA1A99CE8F005209CA /* Images.xcassets */; };
 		640CA3FE1A99CE8F005209CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 640CA3FC1A99CE8F005209CA /* LaunchScreen.xib */; };
 		640CA40A1A99CE8F005209CA /* IMDBGuruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640CA4091A99CE8F005209CA /* IMDBGuruTests.swift */; };
+		640CA4141A9AF7E7005209CA /* kong-poster.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 640CA4131A9AF7E7005209CA /* kong-poster.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		640CA4031A99CE8F005209CA /* IMDBGuruTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IMDBGuruTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		640CA4081A99CE8F005209CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		640CA4091A99CE8F005209CA /* IMDBGuruTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMDBGuruTests.swift; sourceTree = "<group>"; };
+		640CA4131A9AF7E7005209CA /* kong-poster.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "kong-poster.jpeg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		640CA3F11A99CE8F005209CA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				640CA4131A9AF7E7005209CA /* kong-poster.jpeg */,
 				640CA3F21A99CE8F005209CA /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				640CA3F91A99CE8F005209CA /* Main.storyboard in Resources */,
+				640CA4141A9AF7E7005209CA /* kong-poster.jpeg in Resources */,
 				640CA3FE1A99CE8F005209CA /* LaunchScreen.xib in Resources */,
 				640CA3FB1A99CE8F005209CA /* Images.xcassets in Resources */,
 			);
