@@ -52,18 +52,6 @@
                                     <rect key="frame" x="16" y="278" width="368" height="127"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8k8-C7-9vT">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="162" y="400" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="x5A-6p-PRh" eventType="touchDown" id="B8L-1p-cl7"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yMt-py-lfn">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -88,7 +76,6 @@
                                 <exclude reference="kwg-qA-aq6"/>
                                 <exclude reference="H5S-dI-oLZ"/>
                                 <exclude reference="4yD-gb-ZeV"/>
-                                <exclude reference="8k8-C7-9vT"/>
                                 <exclude reference="yMt-py-lfn"/>
                                 <exclude reference="rUQ-C5-JbY"/>
                             </mask>
@@ -99,7 +86,6 @@
                                 <include reference="kwg-qA-aq6"/>
                                 <include reference="H5S-dI-oLZ"/>
                                 <include reference="4yD-gb-ZeV"/>
-                                <include reference="8k8-C7-9vT"/>
                                 <include reference="yMt-py-lfn"/>
                                 <include reference="rUQ-C5-JbY"/>
                             </mask>

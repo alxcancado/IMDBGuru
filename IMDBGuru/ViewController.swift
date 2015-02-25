@@ -34,11 +34,6 @@ class ViewController: UIViewController, IMDBAPIControllerDelegate, UISearchBarDe
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func buttonPressed(sender: UIButton){
-        
-        self.apiController.searchIMDB("King of Kong")
-       
-    }
     
     func didFinishIMDBSearch(result: Dictionary<String, String>) {
         self.titleLabel.text = result["Title"]
@@ -71,7 +66,7 @@ class ViewController: UIViewController, IMDBAPIControllerDelegate, UISearchBarDe
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar!) {
         
-        //searchBar.text
+        self.apiController.searchIMDB(searchBar.text)
         searchBar.resignFirstResponder()
         searchBar.text = ""
         
