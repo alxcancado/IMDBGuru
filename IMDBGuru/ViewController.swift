@@ -60,6 +60,7 @@ class ViewController: UIViewController, IMDBAPIControllerDelegate, UISearchBarDe
             self.posterImageView.clipsToBounds  = true
             self.posterImageView.image          = UIImage(data: posterImageData!)
             
+            self.blurBackgroundUsingImage(self.posterImageView.image!)
         }
         
     }
@@ -78,6 +79,37 @@ class ViewController: UIViewController, IMDBAPIControllerDelegate, UISearchBarDe
         //println("tapped!")
         self.imdbSearchBar.resignFirstResponder()
         
+    }
+    
+    func blurBackgroundUsingImage(image : UIImage) {
+        
+        var frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+        
+        var imageView = UIImageView(frame : frame)
+        imageView.image = image
+        imageView.contentMode = .ScaleAspectFill
+        
+        var blurEffect = UIBlurEffect(style: .Light)
+        var blurEffectView = UIVisualEffectView(effect : blurEffect)
+        blurEffectView.frame = frame
+        
+        var transparentWhiteView        = UIView(frame: frame)
+        transparentWhiteView.backgroundColor = UIColor(white: 1.0, alpha: 0.30)
+        
+        var viewsArray = [imageView, blurEffectView, transparentWhiteView]
+        
+        for index in 0..<viewsArray.count {
+            
+            if let oldView = self.view.viewWithTag(index + 1) {
+                
+                var oldView = self.view.viewWithTag(index + 1)
+                oldView?.removeFromSuperview()
+            }
+            
+            var viewToInsert = viewsArray[index]
+            self.view.insertSubview(viewToInsert, atIndex: index + 1)
+            viewToInsert.tag = index + 1
+        }
     }
 
 }
