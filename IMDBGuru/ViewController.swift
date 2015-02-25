@@ -8,17 +8,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, IMDBAPIControllerDelegate {
     
     @IBOutlet var titleLabel    : UILabel!
     @IBOutlet var realeaseLabel : UILabel!
     @IBOutlet var ratingLabel   : UILabel!
     @IBOutlet var plotLabel     : UILabel!
     @IBOutlet var posterImageView: UIImageView!
+    
+    lazy var apiController : IMDBAPIController = IMDBAPIController(delegate: self)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.apiController.delegate = self
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,14 +32,17 @@ class ViewController: UIViewController {
     
     @IBAction func buttonPressed(sender: UIButton){
         
-        self.titleLabel.text = "King of Kong"
-        self.realeaseLabel.text = "28 Feb 2008"
-        self.ratingLabel.text = "PG-13"
-        self.plotLabel.text = "Diehard video game fans compete to break World Records on classic arcade games."
-        self.posterImageView.image = UIImage(named: "kong-poster.jpeg")
-    
+       
     }
-
+    
+    func didFinishIMDBSearch(result: Dictionary<String, String>) {
+        self.titleLabel.text = result["Title"]
+        self.realeaseLabel.text = result["Released"]
+        self.ratingLabel.text = result["Rated"]
+        self.plotLabel.text = result["Plot"]
+//        self.posterImageView.image = UIImage(named: "kong-poster.jpeg")
+    }
+    
 
 }
 

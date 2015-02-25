@@ -14,6 +14,7 @@
 		640CA3FE1A99CE8F005209CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 640CA3FC1A99CE8F005209CA /* LaunchScreen.xib */; };
 		640CA40A1A99CE8F005209CA /* IMDBGuruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640CA4091A99CE8F005209CA /* IMDBGuruTests.swift */; };
 		640CA4141A9AF7E7005209CA /* kong-poster.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 640CA4131A9AF7E7005209CA /* kong-poster.jpeg */; };
+		640CA4161A9D6F21005209CA /* IMDBAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640CA4151A9D6F21005209CA /* IMDBAPIController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		640CA4081A99CE8F005209CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		640CA4091A99CE8F005209CA /* IMDBGuruTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMDBGuruTests.swift; sourceTree = "<group>"; };
 		640CA4131A9AF7E7005209CA /* kong-poster.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "kong-poster.jpeg"; sourceTree = "<group>"; };
+		640CA4151A9D6F21005209CA /* IMDBAPIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMDBAPIController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				640CA3F31A99CE8F005209CA /* AppDelegate.swift */,
 				640CA3F51A99CE8F005209CA /* ViewController.swift */,
+				640CA4151A9D6F21005209CA /* IMDBAPIController.swift */,
 				640CA3F71A99CE8F005209CA /* Main.storyboard */,
 				640CA3FA1A99CE8F005209CA /* Images.xcassets */,
 				640CA3FC1A99CE8F005209CA /* LaunchScreen.xib */,
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				640CA4161A9D6F21005209CA /* IMDBAPIController.swift in Sources */,
 				640CA3F61A99CE8F005209CA /* ViewController.swift in Sources */,
 				640CA3F41A99CE8F005209CA /* AppDelegate.swift in Sources */,
 			);
@@ -409,6 +413,7 @@
 				640CA40F1A99CE8F005209CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		640CA4101A99CE8F005209CA /* Build configuration list for PBXNativeTarget "IMDBGuruTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				640CA4121A99CE8F005209CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
