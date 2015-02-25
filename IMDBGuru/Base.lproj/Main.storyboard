@@ -64,12 +64,22 @@
                                     <action selector="buttonPressed:" destination="x5A-6p-PRh" eventType="touchDown" id="B8L-1p-cl7"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yMt-py-lfn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yMt-py-lfn">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="80" y="28" width="240" height="128"/>
                                 </variation>
                             </imageView>
+                            <searchBar contentMode="redraw" placeholder="Search IMDB" translatesAutoresizingMaskIntoConstraints="NO" id="rUQ-C5-JbY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="278" width="400" height="44"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="9sQ-d9-HYC"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -80,6 +90,7 @@
                                 <exclude reference="4yD-gb-ZeV"/>
                                 <exclude reference="8k8-C7-9vT"/>
                                 <exclude reference="yMt-py-lfn"/>
+                                <exclude reference="rUQ-C5-JbY"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -90,10 +101,12 @@
                                 <include reference="4yD-gb-ZeV"/>
                                 <include reference="8k8-C7-9vT"/>
                                 <include reference="yMt-py-lfn"/>
+                                <include reference="rUQ-C5-JbY"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="imdbSearchBar" destination="rUQ-C5-JbY" id="97I-4I-n2G"/>
                         <outlet property="plotLabel" destination="4yD-gb-ZeV" id="klc-vN-oQN"/>
                         <outlet property="posterImageView" destination="yMt-py-lfn" id="HMD-B6-2Jq"/>
                         <outlet property="ratingLabel" destination="H5S-dI-oLZ" id="bjc-ST-k7s"/>

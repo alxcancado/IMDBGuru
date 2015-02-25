@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController, IMDBAPIControllerDelegate {
+class ViewController: UIViewController, IMDBAPIControllerDelegate, UISearchBarDelegate {
     
     @IBOutlet var titleLabel    : UILabel!
     @IBOutlet var realeaseLabel : UILabel!
     @IBOutlet var ratingLabel   : UILabel!
     @IBOutlet var plotLabel     : UILabel!
     @IBOutlet var posterImageView: UIImageView!
+    @IBOutlet var imdbSearchBar : UISearchBar!
     
     lazy var apiController : IMDBAPIController = IMDBAPIController(delegate: self)
 
@@ -22,6 +23,9 @@ class ViewController: UIViewController, IMDBAPIControllerDelegate {
         super.viewDidLoad()
         
         self.apiController.delegate = self
+        
+        let tapGesture  = UITapGestureRecognizer(target: self, action: "userTappedInView:")
+        self.view.addGestureRecognizer(tapGesture)
         
     }
 
@@ -32,6 +36,7 @@ class ViewController: UIViewController, IMDBAPIControllerDelegate {
     
     @IBAction func buttonPressed(sender: UIButton){
         
+        self.apiController.searchIMDB("King of Kong")
        
     }
     
@@ -40,9 +45,45 @@ class ViewController: UIViewController, IMDBAPIControllerDelegate {
         self.realeaseLabel.text = result["Released"]
         self.ratingLabel.text = result["Rated"]
         self.plotLabel.text = result["Plot"]
-//        self.posterImageView.image = UIImage(named: "kong-poster.jpeg")
+        
+        if let foundPosterURL = result["Poster"]? {
+            
+            self.formatImageFromPath(foundPosterURL)
+            
+        }
+        
+        
     }
     
+    func formatImageFromPath(path : String) {
+        
+        var posterURL = NSURL(string: path)
+        
+        if let foundPosterImage = posterURL? {
+            
+            var posterImageData                 = NSData(contentsOfURL: foundPosterImage)
+            self.posterImageView.clipsToBounds  = true
+            self.posterImageView.image          = UIImage(data: posterImageData!)
+            
+        }
+        
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar!) {
+        
+        //searchBar.text
+        searchBar.resignFirstResponder()
+        searchBar.text = ""
+        
+    }
+    
+    
+    func userTappedInView(recognizer : UITapGestureRecognizer) {
+        
+        //println("tapped!")
+        self.imdbSearchBar.resignFirstResponder()
+        
+    }
 
 }
 
